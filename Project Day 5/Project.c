@@ -6,13 +6,12 @@
 #define TITLE_LEN 100
 #define AUTHOR_LEN 100
 
-// Enum for book status
+
 typedef enum {
     AVAILABLE,
     BORROWED
 } Status;
 
-// Struct for Book
 typedef struct {
     int id;
     char title[TITLE_LEN];
@@ -21,11 +20,9 @@ typedef struct {
     Status status;
 } Book;
 
-// Global book array and count
 static Book books[MAX_BOOKS];
 static int bookCount = 0;
 
-// Function prototypes
 void addBook();
 void displayBooks();
 void searchBook();
